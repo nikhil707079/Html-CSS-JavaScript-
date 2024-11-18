@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .form-container {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #fff;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 4px;
+            width: 100%;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .question input[type="radio"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Examination Form</h2>
+        <form action="/submit_exam" method="post">
+            <div class="form-group">
+                <label for="name">Student Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div><br>
+<br>
+
+            <div class="form-group">
+                <label for="roll-number">Roll Number:</label>
+                <input type="text" id="roll-number" name="roll-number" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="question">
+                <label>1. What is the capital of France?</label>
+                <div>
+                    <input type="radio" id="q1a" name="q1" value="Paris" required>
+                    <label for="q1a">Paris</label>
+                </div>
+                <div>
+                    <input type="radio" id="q1b" name="q1" value="London">
+                    <label for="q1b">London</label>
+                </div>
+                <div>
+                    <input type="radio" id="q1c" name="q1" value="Rome">
+                    <label for="q1c">Rome</label>
+                </div>
+                <div>
+                    <input type="radio" id="q1d" name="q1" value="Berlin">
+                    <label for="q1d">Berlin</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>2. What is 2 + 2?</label>
+                <div>
+                    <input type="radio" id="q2a" name="q2" value="3" required>
+                    <label for="q2a">3</label>
+                </div>
+                <div>
+                    <input type="radio" id="q2b" name="q2" value="4">
+                    <label for="q2b">4</label>
+                </div>
+                <div>
+                    <input type="radio" id="q2c" name="q2" value="5">
+                    <label for="q2c">5</label>
+                </div>
+                <div>
+                    <input type="radio" id="q2d" name="q2" value="6">
+                    <label for="q2d">6</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
